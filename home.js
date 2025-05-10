@@ -1,31 +1,41 @@
-// filepath: c:\Users\IPRC MUSANZE\Desktop\design\supermarket\hom.js
-const slides = document.querySelectorAll('.slide');
-const dots = document.querySelectorAll('.dot');
-let currentIndex = 0;
+document.addEventListener('DOMContentLoaded', function () {
+    // Menu toggle logic
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    const closeMenu = document.getElementById('close-menu');
 
-function showSlide(index) {
-    // Remove active class from current slide and dot
-    slides[currentIndex].classList.remove('active');
-    dots[currentIndex].classList.remove('active');
+    menuToggle.addEventListener('click', function () {
+        navLinks.style.display = 'block';
+    });
 
-    // Update current index
-    currentIndex = index;
+    closeMenu.addEventListener('click', function () {
+        navLinks.style.display = 'none';
+    });
 
-    // Add active class to new slide and dot
-    slides[currentIndex].classList.add('active');
-    dots[currentIndex].classList.add('active');
+    // Slideshow logic...
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    let currentIndex = 0;
 
-    // Move the slideshow container
-    const slideshow = document.querySelector('.slideshow');
-    slideshow.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
+    function showSlide(index) {
+        slides[currentIndex].classList.remove('active');
+        dots[currentIndex].classList.remove('active');
 
-// Auto-slide every 5 seconds
-setInterval(() => {
-    const nextIndex = (currentIndex + 1) % slides.length;
-    showSlide(nextIndex);
-},6000); //6000 milliseconds = 6 seconds
-// Add click event to dots
-dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => showSlide(index));
+        currentIndex = index;
+
+        slides[currentIndex].classList.add('active');
+        dots[currentIndex].classList.add('active');
+
+        const slideshow = document.querySelector('.slideshow');
+        slideshow.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    setInterval(() => {
+        const nextIndex = (currentIndex + 1) % slides.length;
+        showSlide(nextIndex);
+    }, 6000);
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => showSlide(index));
+    });
 });

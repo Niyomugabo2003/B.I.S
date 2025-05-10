@@ -13,13 +13,17 @@
         <nav class="navbar">
             <div class="menu-toggle" id="menu-toggle">
                 <i class="fa fa-bars"></i>
-              </div>
+            </div>
+           
           <a href="index.html" class="logo">
             <img src="images/logo.jpg" alt="B.I.S Ltd Logo" />
           </a>
 
          
           <ul class="nav-links" id="nav-links">
+            <div class="close-menu" id="close-menu">
+              <i class="fa fa-times" ></i> <!-- Close button -->
+          </div>
             <li><a class="active" href="#">Home</a></li>
             <li><a href="#">About us</a></li>
             <li><a href="#">Products</a></li>
@@ -31,7 +35,8 @@
 
   <main>
     <section aria-label="Hero Section" id="hero" class="section-P1">
-      <h1>Welcome to B.I.S Ltd - Better Irrigation Solutions</h1>
+      <span class="h1"><h1>Welcome to B.I.S Ltd - Better Irrigation Solutions</h1></span>
+      <button id="prev" class="slide-arrow">❮</button>
         <div class="slideshow">
             <div class="slide active">
               <h4>Smart Irrigation</h4>
@@ -54,57 +59,53 @@
               <p>Customized systems for farms, gardens, and greenhouses.</p>
               <a href="homepage.html" class="btn">GET STARTED</a>
             </div>
-          </div>
-          
-
-      <div class="dots">
-        <span class="dot active" data-slide="0"></span>
-        <span class="dot" data-slide="1"></span>
-        <span class="dot" data-slide="2"></span>
+        </div>
+        <button id="next" class="slide-arrow">❯</button>
+        <div class="dots">
+          <span class="dot active" data-slide="0"></span>
+          <span class="dot" data-slide="1"></span>
+          <span class="dot" data-slide="2"></span>
       </div>
     </section>
-
-    <section id="home" class="section-P2" aria-label="Services">
+    <section  class="s-services" aria-label="Services">
       <h2>Our Services</h2>
       <div class="container">
         <div class="grid">
           <article class="service">
             <h3>Irrigation System Installation</h3>
             <p>We offer expert installation of drip, sprinkler, and surface irrigation systems...</p>
-            <i class="fa-solid fa-arrow-right"></i>
+            <a href="service.html"><i class="fa-solid fa-arrow-right"></i></a>
           </article>
 
           <article class="service">
             <h3>Water Distribution Network Design & Optimization</h3>
             <p>Our services include designing and optimizing water distribution networks...</p>
-            <i class="fa-solid fa-arrow-right"></i>
+            <a href="service.html"><i class="fa-solid fa-arrow-right"></i></a>
           </article>
-
           <article class="service">
             <h3>Water Treatment in Irrigation Systems</h3>
             <p>We provide water treatment solutions to ensure the quality of water used in irrigation...</p>
-            <i class="fa-solid fa-arrow-right"></i>
+            <a href="service.html"><i class="fa-solid fa-arrow-right"></i></a>
           </article>
-
           <article class="service">
             <h3>Consultancy on Irrigation and Drainage Solutions</h3>
             <p>Our consultancy services offer expert advice on irrigation and drainage...</p>
-            <i class="fa-solid fa-arrow-right"></i>
+            <a href="#" class="consultation-link"><i class="fa-solid fa-arrow-right">Request a Consultation</i></a>
           </article>
 
           <article class="service">
             <h3>Supply of Irrigation Equipment</h3>
             <p>We supply a wide range of high-quality irrigation equipment...</p>
-            <i class="fa-solid fa-arrow-right"></i>
+            <a href="service.html"><i class="fa-solid fa-arrow-right"></i></a>
           </article>
 
           <article class="service">
             <h3>Training and Capacity Building</h3>
             <p>We offer training programs to enhance the knowledge and skills of individuals and organizations...</p>
-            <i class="fa-solid fa-arrow-right"></i>
+            <a href="service.html"><i class="fa-solid fa-arrow-right"></i></a>
           </article>
         </div>
-        <a href="#" class="consultation-link">Request a Consultation</a>
+        
       </div>
     </section>
     <section id="product" aria-label="Products">
@@ -156,9 +157,7 @@
     <div class="aside-video">
         <iframe width="100%" height="200" src="https://www.youtube.com/embed/8xXnVUYatQk" title="Irrigation Tutorial" frameborder="0" allowfullscreen></iframe>
     </div>
-  </aside>
-  
-  
+  </aside>  
   <footer>
     <div class="footer-container">
       <div class="footer-section about">
@@ -188,7 +187,7 @@
       </div>
       <div class="footer-section whatsapp">
         <h3>Chat with Us</h3>
-        <a href="https://wa.me/+250792982669" target="_blank">
+        <a href="https://wa.me/+250788464672" target="_blank">
           <i class="fab fa-whatsapp"></i> Chat on WhatsApp
         </a>   
       <div class="footer-section contact-form">
@@ -217,8 +216,7 @@
       <p>&copy; 2025 B.I.S Ltd. All rights reserved.</p>
     </div>
   </footer>
-  
 
-  <script src="home.js"></script>
+  <script src="/home.js"></script>
 </body>
 </html>
